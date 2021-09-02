@@ -19,7 +19,7 @@ It is important to mention that this implementation works recursively as it uses
 
 As this is a project I've worked on Windows only, the console command I used was:
 
- -Compilation:`g++ main.cpp -o main`
+- Compilation:`g++ main.cpp -o main`
 
 - Execution:`./main <file_path_of_txt_1> <file_path_of_txt_2>`
 
