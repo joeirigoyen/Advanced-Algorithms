@@ -25,7 +25,7 @@ As this is a project I've worked on Windows only, the console command I used was
 
 ## Sources
 
-I would like to stand out the following implementations from their respective creators, which are the ones I used to give myself an idea on how to implement the algorithm myself:
+I would like to stand out the following implementations from their respective creators, which are the ones I used to get an idea on how to implement the algorithm myself:
 
  - From **Saahil Mahato**: https://medium.com/swlh/strassens-matrix-multiplication-algorithm-936f42c2b344
  - From **Geeks for Geeks**: https://www.geeksforgeeks.org/strassens-matrix-multiplication-algorithm-implementation/
