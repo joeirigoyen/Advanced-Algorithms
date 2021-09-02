@@ -4,7 +4,7 @@ The algorithm itself takes four parameters: ***a***, which is a square vector to
 It is important to mention that this implementation works recursively as it uses the **divide and conquer** paradigm in order to return the product of both matrices. 
 
 
-# Files
+## Files
 
 **reader.cpp** takes a *.txt* file with values written as *comma-separated values* (1,2,3,4...) with each row representing also a row in the matrix to be created. It also contains functions such as:
 
