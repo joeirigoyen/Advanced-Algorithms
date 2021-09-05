@@ -6,8 +6,7 @@
 
 using namespace std;
 
-template <typename T>
-void printVector(vector<T> &vec) {
+void printVector(vector<int> &vec) {
     /* Print every element in a vector */
     cout << '{';
     for (int i = 0; i < vec.size(); i++) {
@@ -19,12 +18,36 @@ void printVector(vector<T> &vec) {
     cout << '}' << endl;
 }
 
-template <typename T>
-void printMatrix(vector<vector<T>> &matrix) {
+string getVector(vector<int> &vec) {
+    string s = "{";
+    /* Add ever vector element to string*/
+    for (int i = 0; i < vec.size(); i++) {
+        if (i < vec.size() - 1) {
+            s += to_string(vec[i]) + ",";
+        } else {
+            s += to_string(vec[i]) + "}";
+        }
+    }
+    return s;
+}
+
+void printMatrix(vector<vector<int>> &m) {
     /* Print every vector inside a matrix */
-    for (int i = 0; i < matrix.size(); i++) {
-        if (i < matrix.size()) {
-            printVector(matrix[i]);
+    for (int i = 0; i < m.size(); i++) {
+        if (i < m.size()) {
+            printVector(m[i]);
+        }
+    }
+}
+
+void printMatrix(vector<vector<int>> &m, string &path) {
+    /* Initialize file */
+    ofstream file(path);
+    string line;
+    /* Print every vector inside a matrix */
+    for (int i = 0; i < m.size(); i++) {
+        if (i < m.size()) {
+            file << getVector(m[i]) + "\n";
         }
     }
 }

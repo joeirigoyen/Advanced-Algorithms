@@ -140,4 +140,8 @@ int main(int argc, char** argv) {
     printMatrix(matS1);
     cout << "File tokenized in: " << r_secs << "seconds" << endl;
     cout << "Solved in: " << m_secs << "seconds" << endl;
-}   
+    /* Write solution to file */
+    string solPath = "../Matrices/solution.txt";
+    printMatrix(matS1, solPath);
+    cout << "File \"" << solPath << "\" has been updated." << endl; 
+}

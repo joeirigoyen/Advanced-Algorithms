@@ -1,59 +1,28 @@
 #include <iostream>
-#include <vector>
+#include <string>
 
 using namespace std;
 
 /* Get Z array given a string combining the pattern and the original string separated by a special character */
-void getZ(char* &s) {
-    // Get size of string
-    const size_t stringSize = sizeof(s) / sizeof(s[0]);
-    // Create an empty array with the size of the string
-    int zArr[stringSize];
-    // Declare left and right pointers
-    size_t l = 0;
-    size_t r = 0;
-    // Start lookup
-    for (int i = 0; i < stringSize; i++) {
+void getZ(string &s) {
+    // Define left and right bounds for z-boxes as well as the matching index
+    int l = 0, r = 0, m = 0;
+    // Start lookup from second element in z-array
+    for (int i = 1; i < s.size(); i++) {
+        // If there is no match currently
         if (i > r) {
-            r = i;
-            l = r;
-            while (true) {
-                if (r >= stringSize || s[r] != s[r - l]) {
-                    break;
-                } else {
-                    r++;
-                }
-            }
-            zArr[i] = r - l;
-                r--;
+            
         }
     }
 }
 
-/* Find a pattern within a given string using the Z algorithm*/
-void findPattern(char* &s, char* &p) {
-    // Get sizes of both the string and the pattern
-    const size_t sSize = sizeof(s) / sizeof(s[0]);
-    const size_t pSize = sizeof(p) / sizeof(p[0]);
-    // Create new string using pattern, the original string and a special character '$'
-    const size_t newSize = sSize + pSize + 1;
-    char newStr[newSize];
-    // Add special character
-    newStr[sSize] = '$';
-    // Add pattern characters
-    for (int i = 0; i < pSize; i++) {
-        newStr[i] = p[i];
-    }
-    // Add string characters
-    for (int i = sSize + 1; i < newSize; i++) {
-        newStr[i] = s[i];
-    }
-    // Print new string
-    for (char c: newStr) {
-        cout << c;
-    }
+/* Find a pattern within a given string using the Z algorithm */
+void findPattern(const string &s, const string &p) {
+    // Create new string
+    string newStr = p + "$" + s;
+    // Find pattern within string
 } 
 
 int main() {
-    findPattern();
+    findPattern("aabcabcaabca", "abcaa");
 }
