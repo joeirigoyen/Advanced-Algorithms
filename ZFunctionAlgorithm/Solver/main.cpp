@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <chrono>
 #include "csvparser.cpp"
 
 using namespace std;
+using namespace std::chrono;
 
 // Print z-array
 template <typename T>
@@ -60,6 +62,12 @@ int main(int argc, char** argv) {
     // Initialize string
     string text = getStringFromFile(argv[1]);
     // Look for pattern in text
+    /* ---- Runtime test ---- */
+    auto start = high_resolution_clock::now();
     vector<int> zarr = findPattern(text, argv[2]);
+    auto stop = high_resolution_clock::now();
+    auto runtime = duration_cast<microseconds>(stop - start);
+    auto secs = runtime.count() / 10e5;
     printArray(zarr);
+    cout << "Found in " << secs << " seconds" << endl;
 }
