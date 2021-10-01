@@ -74,7 +74,7 @@ void graph::bfs(int s) {
 
 int main() {
     // Read file
-    string filename = "D:\\irigx\\Documents\\School\\5to\\ADA\\Advanced-Algorithms\\BFS\\texts\\test.txt";
+    string filename = "texts\\test.txt";
     graph g;
     g = readFromFile(filename);
     g.display();
