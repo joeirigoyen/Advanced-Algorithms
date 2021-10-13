@@ -3,8 +3,8 @@
 #include<iostream>
 #include <vector>
 #include "kmpAlgorithm.h"
-using namespace std;
 
+using namespace std;
 
 void findPrefix(string &pattern, int &m, vector<int> &prefArray) {
 	size_t length = 0;
