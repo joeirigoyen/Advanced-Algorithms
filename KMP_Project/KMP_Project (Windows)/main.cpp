@@ -53,10 +53,11 @@ void execute_kmp(string &filename) {
 	cout << endl;
 }
 
-int main(int argc, char* argv[]) {
+int main() {
+	string filenames[3] = {"txt_files\\mcode1.txt", "txt_files\\mcode2.txt", "txt_files\\mcode3.txt"};
 	// Look for files set as arguments in console execution
-    for (size_t i = 1; i < argc; i++) {
-		string filename = argv[i];
+    for (size_t i = 0; i < 3; i++) {
+		string filename = filenames[i];
         execute_kmp(filename);
     }
 }
