@@ -1,0 +1,13 @@
+Initial string: 11111100100100101101
+Satisfied: 158 | Unsatisfied: 24
+
+Testing string: 11111100100100101101
+Changed clause: not x4 or not x20 or not x6.  Flipped x4's value to 0
+New string: 11101100100100101101
+
+Testing string: 11101100100100101101
+Changed clause: not x6 or not x5 or x4.  Flipped x5's value to 0
+New string: 11100100100100101101
+
+Testing string: 11100100100100101101
+String satisfies formula
