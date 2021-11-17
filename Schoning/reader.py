@@ -16,12 +16,6 @@ def read_file(filename: str) -> tuple:
                 conditions.append(words)
     f.close()
     return (variables, conditions)
-
-
-def create_file(filename: str) -> None:
-    file_path = os.path.abspath(filename)
-    if not os.path.exists(file_path):
-        os.makedirs(file_path)
         
         
 def write_on_file(filename: str, content: str) -> None:
@@ -36,8 +30,3 @@ def write_on_file(filename: str, contents: list) -> None:
     f = open(file_path, "a+")
     for i in contents:
         f.write(i)
-
-
-""" if __name__ == '__main__':
-    x, y = read_file(os.path.abspath("3SAT_Example.txt"))
-    print(y) """
